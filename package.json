@@ -5,8 +5,9 @@
   "main": "app.js",
   "scripts": {
     "ng": "ng",
+    "build:digitalocean": "yarn install --production=false && yarn run build && rm -rf node_modules && yarn install --production --frozen-lockfile",
     "start": "node app.js",
-    "build": "ng build",
+    "build": "yarn build:digitalocean",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
